@@ -4,9 +4,7 @@ RUN [ "cross-build-start" ]
 
 COPY desegmentandmerge.sh /opt/desegmentandmerge.sh
 
-RUN chmod +x /opt/desegmentandmerge.sh
-
-RUN mkdir -p /opt/tsharklogs
+RUN chmod +x /opt/desegmentandmerge.sh && mkdir -p /opt/tsharklogs
 
 WORKDIR /opt/tsharklogs
 
