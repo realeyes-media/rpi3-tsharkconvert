@@ -31,4 +31,4 @@ done
 mergecap -F pcap -v ${FILESTODO[@]} -w tempoutputcombined.pcap
 
 # Use TShark to desegment TCP packets
-tshark -r tempoutputcombined.pcap -R "http" -o tcp.desegment_tcp_streams:TRUE -w $OUTPUTNAME
+tshark -r tempoutputcombined.pcap -R "http" -2 -o tcp.desegment_tcp_streams:TRUE -w $OUTPUTNAME
