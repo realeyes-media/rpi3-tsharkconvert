@@ -28,7 +28,7 @@ for file in $THESEFILES; do
 done
 
 # Combine files
-mergecap -v ${FILESTODO[@]} -w tempoutputcombined.pcap
+mergecap -F pcap -v ${FILESTODO[@]} -w tempoutputcombined.pcap
 
 # Use TShark to desegment TCP packets
 tshark -r tempoutputcombined.pcap -R "http" -o tcp.desegment_tcp_streams:TRUE -w $OUTPUTNAME
