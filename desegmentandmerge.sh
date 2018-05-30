@@ -23,7 +23,7 @@ CURRENT=$(pwd)
 THESEFILES=$(ls *.pcap)
 for file in $THESEFILES; do
   echo "Adding $file"
-  THISFILE="$CURRENT$file"
+  THISFILE="$CURRENT/$file"
   FILESTODO+=("$THISFILE")
 done
 
